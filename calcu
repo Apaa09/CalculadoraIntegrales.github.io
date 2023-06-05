@@ -1,0 +1,13 @@
+from sympy import symbols, integrate
+
+x = symbols('x')
+
+def calcular_integral():
+    funcion = input("Ingrese la función: ")
+    try:
+        integral = integrate(funcion, x)
+        print("La integral de la función es:", integral)
+    except Exception as e:
+        print("Ocurrió un error al calcular la integral:", str(e))
+
+calcular_integral()
